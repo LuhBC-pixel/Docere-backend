@@ -1,11 +1,9 @@
-import { Request, Response,  } from "express";
+import { Request, Response, NextFunction } from 'express';
 
 const docere = require('../mocks/docere');
 
-class DocereController {
-  showDocere(req: Request, res: Response) {
-    return res.status(200).json(docere);
-  }
-}
+const showDocere = (req: Request, res: Response, next: NextFunction) => {
+  return res.status(200).json(docere);
+};
 
-export { DocereController };
+export { showDocere };

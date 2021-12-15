@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { DocereController } from './controller/DocereController';
+import { showDocere } from './controller/DocereController';
 const router = Router();
 
-router.get('/', DocereController);
+router.get('/', showDocere);
 
 export { router };
